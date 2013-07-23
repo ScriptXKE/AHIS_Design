@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>AHIS - Animal Health Information System</title>
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        
+    <!-- common stylesheets-->
+        <!-- bootstrap framework css -->
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <!-- google web fonts -->
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abel">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+
+    <!-- aditional stylesheets -->
+        <!-- main stylesheet -->
+            <link rel="stylesheet" href="css/ahis-main.css">
+
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css"><![endif]-->
+        <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css"><![endif]-->
+            
+        <!--[if lt IE 9]>
+            <script src="js/ie/html5shiv.min.js"></script>
+            <script src="js/ie/respond.min.js"></script>
+            <script src="js/lib/flot-charts/excanvas.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body class="bg_d">
+    <!-- main wrapper (without footer) -->    
+        <div class="main-wrapper">
+          <!-----Start my top bar-------->
+        <div class="mybar">
+        <!-- header -->
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="span3">
+                            <div class="main-logo"><a href="dashboard.html"><img src="img/logo.png" alt="AHIS Admin"></a></div>
+                        </div>
+                        
+                        <div class="span9">
+                            <div class="user-box">
+                                <div class="user-box-inner">
+                                    <img src="img/avatars/avatar.png" alt="" class="user-avatar img-avatar">
+                                    <div class="user-info">
+                                        Welcome, <strong>Titus</strong>
+                                        <ul class="unstyled">
+                                            <li><a href="user_profile.html">Settings</a></li>
+                                            <li>&middot;</li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <!-- top bar -->
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <div class="pull-right top-search">
+                            <form action="" >
+                                <input type="text" name="q" id="q-main">
+                                <button class="btn"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="fade-menu" class="pull-left">
+                            <ul class="clearfix" id="mobile-nav">
+                                
+                                <li>
+                                    <a href="javascript:void(0)"><i class="icsw16-home icsw16-white"></i>&nbsp;&nbsp;Home</a>
+                                    
+                                </li>
+                                
+                                <li><a href="javascript:void(0)"><i class="icsw16-documents icsw16-white"></i>&nbsp;&nbsp;Cases</a>
+                                  <ul>
+                                        <li>
+                                            <a href="#">Open New Case</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Open Existing Case</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="icsw16-chart-5 icsw16-white"></i>&nbsp;&nbsp;Reports</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Create New Report</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Open Existing Report</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="icsw16-megaphone icsw16-white"></i>&nbsp;&nbsp;Support Ticket</a>
+                                   
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="icsw16-user icsw16-white"></i>&nbsp;&nbsp;User Management</a>
+                                 <ul>
+                                        <li>
+                                            <a href="adduser.html">Add New User</a>
+                                        </li>
+                                        <li>
+                                            <a href="viewusers.html">View Users</a>
+                                        </li>
+                                    </ul>
+                                   
+                                </li>
+                                <li><a href="javascript:void(0)"><i class="icsw16-alert-2 icsw16-white"></i>&nbsp;&nbsp;Help</a>
+                                   
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-----End my top bar-------->
+
+        <!-- breadcrumbs -->
+               <div class="container">
+                <ul id="breadcrumbs">
+                    <li><a href="dashboard.html"><i class="icon-home"></i></a></li>
+                </ul>
+            </div>
+            
+        <!-- main content -->
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="w-box w-box-green">
+                            <div class="w-box-header">
+                                <h4>Add New User</h4>
+                                <i class="icsw16-settings icsw16-white pull-right"></i>
+                            </div>
+                           <div class="w-box-content cnt_a">
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <p class="heading_a">General Information</p>
+                                       
+                                    <div class="formSep">
+                                        <label for="u_username">Username</label>
+                                        <input type="text" id="u_username" name="u_username" class="span8" value="TNderitu" />
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_name">Name</label>
+                                        <input type="text" id="u_name" name="u_name" class="span8" value="Titus Nderitu" />
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_password">Password</label>
+                                        <input type="password" id="u_password" name="u_password" class="span8" />
+                                        <span class="help-block">Enter Password</span>
+                                        <input type="password" id="u_repassword" name="u_repassword" class="span8" />
+                                        <span class="help-block">Repeat Password</span>
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_email">Email</label>
+                                        <input type="text" id="u_email" name="u_email" class="span8" value="titus@digitalbrush.co.ke" />
+                                    </div>
+                                    <div class="formSep">
+                                        <label>Gender</label>
+                                        <label for="u_male" class="radio inline"><input type="radio" name="u_gender" id="u_male"/> Male</label>
+                                        <label for="u_female" class="radio inline"><input type="radio" name="u_gender" id="u_female"/> Female</label>
+                                    </div>
+                                    
+                                    </div>
+                                    <div class="span6">
+                                        <p class="heading_a">Additional settings</p>
+                                       <div class="formSep">
+                                        <label>Passport Photo</label>
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                                            <div class="fileupload-new thumbnail" style="width: 150px; height: 150px;">
+                                                <img src="img/dummy_150x150.gif" alt="">
+                                            </div>
+                                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 150px; max-height: 150px; line-height: 20px;"></div>
+                                            <div>
+                                                <span class="btn btn-small btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
+                                                <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                       <div class="formSep">
+                                        <label>Clearance Level:</label>
+                                        <select id="s2_single" class="span12">
+                                            <option value=""></option>
+                                        <optgroup label="Administrator">
+                                            <option value="SA">Super Administrator</option>
+                                            <option value="HI">Administrator</option>
+                                        </optgroup>
+                                        <optgroup label="Manager">
+                                            <option value="AP">Author/Publisher</option>
+                                            <option value="DE">Data Entry</option>
+                                            <option value="RO">Read-Only</option>
+                                        </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_signature">Description</label>
+                                        <textarea name="u_signature" id="u_signature" cols="30" rows="4" class="span8"></textarea>
+                                    </div>
+                                       
+                                    </div>
+                                </div>
+                              
+                              </div>
+                            <div class="w-box-footer">
+                                <div class="f-center">
+                                    <button class="btn btn-ahis-3">Save</button>
+                                    <button class="btn btn-link inv-cancel">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_space"></div>
+        </div> 
+
+    <!-- footer -->   <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="span5">
+                        <div>&copy; FAO - FSNAU 2013</div>
+                    </div>
+                    <div class="span7">
+                        <ul class="unstyled">
+                            <li><a href="#">Documentation</a></li>
+                            <li>&middot;</li>
+                            <li><a href="settings.html">System Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        </footer>
+        
+    <!-- Common JS -->
+        <!-- jQuery framework -->
+            <script src="js/jquery.min.js"></script>
+            <script src="js/jquery-migrate.js"></script>
+        <!-- bootstrap Framework plugins -->
+            <script src="js/bootstrap.min.js"></script>
+        <!-- top menu -->
+            <script src="js/jquery.fademenu.js"></script>
+        <!-- top mobile menu -->
+            <script src="js/selectnav.min.js"></script>
+        <!-- actual width/height of hidden DOM elements -->
+            <script src="js/jquery.actual.min.js"></script>
+        <!-- jquery easing animations -->
+            <script src="js/jquery.easing.1.3.min.js"></script>
+        <!-- power tooltips -->
+            <script src="js/lib/powertip/jquery.powertip-1.1.0.min.js"></script>
+        <!-- date library -->
+            <script src="js/moment.min.js"></script>
+        <!-- common functions -->
+            <script src="js/ahis_common.js"></script>
+
+        <!-- switch buttons -->
+            <script src="js/lib/ibutton/js/jquery.ibutton.beoro.min.js"></script>
+        <!-- enchanced select box, tag handler -->
+            <script src="js/lib/select2/select2.min.js"></script>
+
+            <script src="js/pages/ahis_settings.js"></script>
+    </body>
+</html>
