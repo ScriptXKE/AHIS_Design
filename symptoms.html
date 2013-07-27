@@ -2,6 +2,7 @@
 <html lang="en-US">
     <head>
 
+
         <meta charset="UTF-8">
         <title>AHIS - Animal Health Information System</title>
         <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -16,6 +17,14 @@
             <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
 
     <!-- aditional stylesheets -->
+            <!-- jQuery UI theme -->
+            <link rel="stylesheet" href="js/lib/jquery-ui/css/Aristo/Aristo.css">
+        <!-- 2 col multiselect -->
+            <link rel="stylesheet" href="js/lib/multi-select/css/multi-select.css">
+        <!-- enchanced select box, tag handler -->
+            <link rel="stylesheet" href="js/lib/select2/select2.css">
+        <!-- datepicker -->
+            <link rel="stylesheet" href="js/lib/bootstrap-datepicker/css/datepicker.css">
         <!-- main stylesheet -->
             <link rel="stylesheet" href="css/ahis-main.css">
 
@@ -129,8 +138,8 @@
                 <div class="span2">
                         <div class="mbox_nav sidebar">
                             <ul id="mypageNav">
-                                <li class="current"><a href="#">Basic Details</a></li>
-                                <li><a href="symptoms.html">Symptoms</a></li>
+                                <li><a href="addcase.html">Basic Details</a></li>
+                                <li class="current"><a href="#">Symptoms</a></li>
                                 <li><a href="surveillance.html">Surveillance</a></li>
                                 <li><a href="lab.html">Laboratory</a></li>
                                 <li><a href="prognosis.html">Prognosis</a></li>
@@ -140,83 +149,27 @@
                     <div class="span10">
                         <div class="w-box w-box-blue">
                             <div class="w-box-header">
-                                <h4>New Case</h4>
+                                <h4>Surveillance</h4>
                             </div>
                             <div class="w-box-content cnt_a">
                                 <div class="row-fluid">
-                                    <div class="span6">
-                                        <p class="heading_a">Case Information</p>
-                                         <div class="formSep">
-                                            <label for="s_offline">SMS Details</label>
-                                       			 <div id="list_basic" class="SMS-list">
-                           
-                                            <ul>
-                                                <li>
-                                                    <span class="list-username"><a href="javascript:void(0)">Nicolas Kerandi</a></span>
-                                                    <span class="list-info"><span>Phone:</span>(+254) 720 555 555<span>Email:</span> nicolas@netmedia.co.ke</span>
-                                                    <span class="list-info"><span>Info: </span>Guys, I am buying pizza at our next Saturday meeting</span>
-                                                </li>
-                                                
-                                            </ul>
-
-                                			</div>
-                                         </div>
-                                    
+                                    <div class="span12">
+                                       <p class="heading_a">Symptoms</p>
                                         <div class="formSep">
-                                            <label for="s_off_message">About the case</label>
-                                            <textarea name="s_off_message" id="s_off_message" cols="30" rows="6" class="span8">
-Enter some details about the case here</textarea>
+                                            <label for="syptoms">Select the symptoms for this case</label>
+                                            <input type="text" id="syptoms" name="syptoms" class="span8" value="Bleeding">
                                         </div>
-                                       
-                                    </div>
-                                    <div class="span6">
-                                        <p class="heading_a">Case Details</p>
 
-                                        <div class="formSep">
-                                            <label for="case_location">Location</label>
-                                            <select name="case_location" id="case_location" class="span6">
-                                                <option value="place1">Hageiza</option>
-                                                <option value="place3">Hageiza hapo down</option>
-                                                <option value="place4">Hageiza Uptown</option>
-                                                <option value="place5">Hageiza Grogon</option>
-                                            </select>
-
-                                        </div>
-                                        <div class="formSep">
-                                            <label for="animal_affected">Animal Affected</label>
-                                            <select name="animal_affected" id="animal_affected" class="span6">
-                                                <option value="a_cow">Cow</option>
-                                                <option value="a_goat">Goat</option>
-                                                <option value="a_chicken">Chicken</option>
-                                                <option value="a_camel">Camel</option>
-                                                <option value="a_sheep">Sheep</option>
-                                                <option value="a_rabbit">Rabbit?</option>
-
-                                            </select>
-                                        </div>
-                                         <div class="formSep">
-                                        <label for="herd_animals">How many animals in the herd?</label>
-                                        <input type="text" id="herd_animals" name="herd_animals" class="span8" value="0" />
-                                    </div>
-                                     <div class="formSep">
-                                        <label for="herd_affected">How many animals affected?</label>
-                                        <input type="text" id="herd_affected" name="herd_affected" class="span8" value="25" />
-                                    </div>
-                                     <div class="formSep">
-                                        <label for="herd_days">How many days have the symptoms been observed?</label>
-                                        <input type="text" id="herd_days" name="herd_days" class="span8" value="2 Weeks" />
-                                    </div>
                                     </div>
                                 </div>
-
-                        </div>
-                          <div class="w-box-footer">
-                                <div class="f-center">
-                                    <button class="btn btn-ahis-3">Save</button>
-                                    <button class="btn btn-link inv-cancel">Cancel</button>
-                                </div>
-                            </div>
-
+                                                               
+                        	</div>
+                            <div class="w-box-footer">
+                                	<div class="f-center">
+                                    	<button class="btn btn-ahis-3">Save</button>
+                                   	 <button class="btn btn-link inv-cancel">Cancel</button>
+                               		</div>
+                           		</div>                          
                         </div>
                         
                         <div class="w-box w-box-blue">
@@ -302,6 +255,7 @@ Add your comments here</textarea><br />
             <script src="js/jquery.actual.min.js"></script>
         <!-- jquery easing animations -->
             <script src="js/jquery.easing.1.3.min.js"></script>
+
         <!-- power tooltips -->
             <script src="js/lib/powertip/jquery.powertip-1.1.0.min.js"></script>
         <!-- date library -->
@@ -315,5 +269,58 @@ Add your comments here</textarea><br />
             <script src="js/lib/select2/select2.min.js"></script>
 
             <script src="js/pages/ahis_settings.js"></script>
+            
+  <!-- Forms -->  
+        <!-- jQuery UI -->
+            <script src="js/lib/jquery-ui/jquery-ui-1.10.2.custom.min.js"></script>
+        <!-- touch event support for jQuery UI -->
+            <script src="js/lib/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+        <!-- progressbar animations -->
+            <script src="js/form/jquery.progressbar.anim.min.js"></script>
+        <!-- 2col multiselect -->
+            <script src="js/lib/multi-select/js/jquery.multi-select.min.js"></script>
+            <script src="js/lib/multi-select/js/jquery.quicksearch.min.js"></script>
+        <!-- combobox -->
+            <script src="js/form/fuelux.combobox.min.js"></script>
+        <!-- file upload widget -->
+            <script src="js/form/bootstrap-fileupload.min.js"></script>
+        <!-- masked inputs -->
+            <script src="js/lib/jquery-inputmask/jquery.inputmask.min.js"></script>
+            <script src="js/lib/jquery-inputmask/jquery.inputmask.extensions.js"></script>
+            <script src="js/lib/jquery-inputmask/jquery.inputmask.date.extensions.js"></script>
+        <!-- enchanced select box, tag handler -->
+            <script src="js/lib/select2/select2.min.js"></script>
+        <!-- password strength metter -->
+            <script src="js/lib/pwdMeter/jquery.pwdMeter.min.js"></script>
+        <!-- datepicker -->
+            <script src="js/lib/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+        <!-- timepicker -->
+            <script src="js/lib/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+        <!-- colorpicker -->
+            <script src="js/lib/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+        <!-- metadata -->
+            <script src="js/lib/ibutton/js/jquery.metadata.min.js"></script>
+        <!-- switch buttons -->
+            <script src="js/lib/ibutton/js/jquery.ibutton.ahis.js"></script>
+        <!-- autosize textarea -->
+            <script src="js/form/jquery.autosize.min.js"></script>
+        <!-- textarea counter -->
+            <script src="js/lib/jquery-textarea-counter/jquery.textareaCounter.plugin.min.js"></script>
+        <!-- UI Spinners -->
+            <script src="js/lib/jqamp-ui-spinner/globalize/globalize.min.js"></script>
+            <script src="js/lib/jqamp-ui-spinner/globalize/cultures/globalize.culture.fr-FR.js"></script>
+            <script src="js/lib/jqamp-ui-spinner/globalize/cultures/globalize.culture.ja-JP.js"></script>
+            <script src="js/lib/jqamp-ui-spinner/globalize/cultures/globalize.culture.zh-CN.js"></script>
+            <script src="js/lib/jqamp-ui-spinner/compiled/jqamp-ui-spinner.min.js"></script>
+            <script src="js/lib/jqamp-ui-spinner/compiled/jquery-mousewheel-3.0.6.min.js"></script>
+        <!-- plupload and the jQuery queue widget -->
+            <script type="text/javascript" src="js/lib/plupload/js/plupload.full.js"></script>
+            <script type="text/javascript" src="js/lib/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
+        <!-- WYSIWG Editor -->
+            <script src="js/lib/ckeditor/ckeditor.js"></script>
+
+            <script src="js/pages/ahis_form_elements.js"></script>
+
+
     </body>
 </html>
